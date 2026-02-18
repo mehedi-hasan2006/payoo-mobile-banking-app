@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -12,6 +12,9 @@
     <!-- Daisy UI & Tailwind CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Daisy UI theme  -->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
 
 
     <!-- Font Awesome CDN  -->
@@ -45,7 +48,8 @@
                         <img src="./assets/logo.png" alt="">
                     </div>
                     <div>
-                        <h2 class="text-black font-extrabold text-[18px]"> $ <span id="currrent-balance">45000</span></h2>
+                        <h2 class="text-black font-extrabold text-[18px]"> $ <span id="currrent-balance">45000</span>
+                        </h2>
                         <p class="text-[14px] text-neutral/50 ">Available Balance</p>
                     </div>
                 </div>
@@ -112,6 +116,50 @@
 
 
 
+        <!-- Add Money Section  -->
+        <section class="w-10/12 mx-auto py-10">
+            <div class=" ">
+                <h2 class="text-neutral font-semibold text-[18px] pb-3">Add Money</h2>
+                <fieldset class="fieldset bg-white border-base-300 rounded-[24px] border p-4 pt-8 pb-8 shadow-md">
+
+
+                    <label class="label font-medium text-neutral-950 ">Select A Bank </label>
+                    <select
+                        class="select select-ghost w-full border-none bg-base-200  outline-violet-500 rounded-full ">
+                        <option disabled selected>Select Bank</option>
+                        <option value="bkash">Bkash</option>
+                        <option value="nagad">Nagad</option>
+                        <option value="rocket">Rocket</option>
+                        <option value="dbbl">DBBL</option>
+                        <option value="ibbl">IBBL</option>
+                        <option value="ab">AB Bank</option>
+                        <option value="city">City Bank</option>
+                    </select>
+
+                    <label class="label font-medium text-neutral-950 ">Bank Account Number</label>
+                    <input id="agent-number" type="text" minlength="11" maxlength="11"
+                        class="input rounded-full w-full border-none bg-base-200 py-4 outline-none focus:ring-2 ring-violet-500"
+                        placeholder="Enter 11 digit account number" />
+
+                    <label class="label font-medium text-neutral-950 ">Amount to Add</label>
+                    <input id="cashout-amount" type="number"
+                        class="input rounded-full w-full border-none bg-base-200 py-4 outline-none focus:ring-2 ring-violet-500"
+                        placeholder="Add Amount to Withdraw" />
+
+                    <label class="label font-medium text-neutral-950 pt-3">Pin Number</label>
+                    <input id="cashout-pin" type="password" minlength="4" maxlength="4"
+                        class="input rounded-full w-full border-none bg-base-200 py-4 outline-none focus:ring-2 ring-violet-500"
+                        placeholder="Enter 4 digit pin number" />
+
+                    <button id="cashout-btn" class="btn btn-primary mt-4 rounded-full tex-[20px] font-semibold">Add
+                        Money</button>
+                </fieldset>
+            </div>
+        </section>
+
+
+
+
         <!-- Cashout Section  -->
         <section class="w-10/12 mx-auto py-10">
             <div class=" ">
@@ -120,12 +168,12 @@
 
 
                     <label class="label font-medium text-neutral-950 ">Agent Number</label>
-                    <input id="agent-number" type="text" minlength="11" maxlength="11" 
+                    <input id="agent-number" type="text" minlength="11" maxlength="11"
                         class="input rounded-full w-full border-none bg-base-200 py-4 outline-none focus:ring-2 ring-violet-500"
                         placeholder="Enter your mobile" />
 
                     <label class="label font-medium text-neutral-950 ">Amount</label>
-                    <input id="cashout-amount" type="number" 
+                    <input id="cashout-amount" type="number"
                         class="input rounded-full w-full border-none bg-base-200 py-4 outline-none focus:ring-2 ring-violet-500"
                         placeholder="Enter your mobile" />
 
@@ -134,8 +182,99 @@
                         class="input rounded-full w-full border-none bg-base-200 py-4 outline-none focus:ring-2 ring-violet-500"
                         placeholder="Enter 4 digit pin" />
 
-                    <button id="cashout-btn"
-                        class="btn btn-primary mt-4 rounded-full tex-[20px] font-semibold">Withdraw Money</button>
+                    <button id="cashout-btn" class="btn btn-primary mt-4 rounded-full tex-[20px] font-semibold">Withdraw
+                        Money</button>
+                </fieldset>
+            </div>
+        </section>
+
+
+
+        <!-- Transfer Money  -->
+        <section class="w-10/12 mx-auto py-10">
+            <div class=" ">
+                <h2 class="text-neutral font-semibold text-[18px] pb-3">Transfer Money</h2>
+                <fieldset class="fieldset bg-white border-base-300 rounded-[24px] border p-4 pt-8 pb-8 shadow-md">
+
+
+                    <label class="label font-medium text-neutral-950 ">User Account Number</label>
+                    <input id="agent-number" type="text" minlength="11" maxlength="11"
+                        class="input rounded-full w-full border-none bg-base-200 py-4 outline-none focus:ring-2 ring-violet-500"
+                        placeholder="Enter 11 digit number" />
+
+                    <label class="label font-medium text-neutral-950 ">Amount</label>
+                    <input id="cashout-amount" type="number"
+                        class="input rounded-full w-full border-none bg-base-200 py-4 outline-none focus:ring-2 ring-violet-500"
+                        placeholder="Enter amount to transfer" />
+
+                    <label class="label font-medium text-neutral-950 pt-3">Enter 4 Digit Pin Number </label>
+                    <input id="cashout-pin" type="password" minlength="4" maxlength="4"
+                        class="input rounded-full w-full border-none bg-base-200 py-4 outline-none focus:ring-2 ring-violet-500"
+                        placeholder="Enter 4 digit pin" />
+
+                    <button id="cashout-btn" class="btn btn-primary mt-4 rounded-full tex-[20px] font-semibold">Send
+                        Now</button>
+                </fieldset>
+            </div>
+        </section>
+
+
+        <!-- Get Bonus  -->
+        <section class="w-10/12 mx-auto py-10">
+            <div class=" ">
+                <h2 class="text-neutral font-semibold text-[18px] pb-3">Get Bonus</h2>
+                <fieldset class="fieldset bg-white border-base-300 rounded-[24px] border p-4 pt-8 pb-8 shadow-md">
+
+
+                    <label class="label font-medium text-neutral-950 ">Enter Bonus Coupon</label>
+                    <input id="agent-number" type="text" minlength="11" maxlength="11"
+                        class="input rounded-full w-full border-none bg-base-200 py-4 outline-none focus:ring-2 ring-violet-500"
+                        placeholder="Enter 11 digit number your coupon" />
+
+                    <button id="cashout-btn" class="btn btn-primary mt-4 rounded-full tex-[20px] font-semibold">Get
+                        Bonus</button>
+                </fieldset>
+            </div>
+        </section>
+
+
+        <!--Pay Bill  -->
+        <section class="w-10/12 mx-auto py-10">
+            <div class=" ">
+                <h2 class="text-neutral font-semibold text-[18px] pb-3">Pay Bill</h2>
+                <fieldset class="fieldset bg-white border-base-300 rounded-[24px] border p-4 pt-8 pb-8 shadow-md">
+
+
+                    <label class="label font-medium text-neutral-950 ">Select To Pay </label>
+                    <select
+                        class="select select-ghost w-full border-none bg-base-200  outline-violet-500 rounded-full ">
+                        <option disabled selected>Select Bank</option>
+                        <option value="bkash">Bkash</option>
+                        <option value="nagad">Nagad</option>
+                        <option value="rocket">Rocket</option>
+                        <option value="dbbl">DBBL</option>
+                        <option value="ibbl">IBBL</option>
+                        <option value="ab">AB Bank</option>
+                        <option value="city">City Bank</option>
+                    </select>
+
+                    <label class="label font-medium text-neutral-950 ">Biller Account Number</label>
+                    <input id="agent-number" type="text" minlength="11" maxlength="11"
+                        class="input rounded-full w-full border-none bg-base-200 py-4 outline-none focus:ring-2 ring-violet-500"
+                        placeholder="Enter account number" />
+
+                    <label class="label font-medium text-neutral-950 ">Amount to Pay</label>
+                    <input id="cashout-amount" type="number"
+                        class="input rounded-full w-full border-none bg-base-200 py-4 outline-none focus:ring-2 ring-violet-500"
+                        placeholder="Add Amount to pay" />
+
+                    <label class="label font-medium text-neutral-950 pt-3">Pin Number</label>
+                    <input id="cashout-pin" type="password" minlength="4" maxlength="4"
+                        class="input rounded-full w-full border-none bg-base-200 py-4 outline-none focus:ring-2 ring-violet-500"
+                        placeholder="Enter 4 digit pin number" />
+
+                    <button id="cashout-btn" class="btn btn-primary mt-4 rounded-full tex-[20px] font-semibold">Add
+                        Money</button>
                 </fieldset>
             </div>
         </section>
