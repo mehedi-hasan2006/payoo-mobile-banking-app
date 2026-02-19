@@ -74,7 +74,7 @@
 
             <section class="pt-6">
                 <div class="grid grid-cols-3 gap-4">
-                    <button onclick="showOnly('add-money')"
+                    <button onclick="showOnly('add-money')" 
                         class="btn flex-col h-full rounded-xl btn-secondary btn-soft py-5">
 
                         <img class="mx-auto pb-1" src="./assets/opt-1.png" alt="">
@@ -154,7 +154,7 @@
                     <label class="label font-medium text-neutral-950 pt-3">Pin Number</label>
                     <input id="add-money-pin" type="password" minlength="4" maxlength="4"
                         class="input rounded-full w-full border-none bg-base-200 py-4 outline-none focus:ring-2 ring-violet-500"
-                        placeholder="Enter 4 digit pin number" />
+                        placeholder="Enter 4 digit pin number" value="1234" />
 
                     <button id="add-money-btn" class="btn btn-primary mt-4 rounded-full tex-[20px] font-semibold">Add
                         Money</button>
@@ -185,7 +185,7 @@
                     <label class="label font-medium text-neutral-950 pt-3">4 Digit Pin</label>
                     <input id="cashout-pin" type="password" minlength="4" maxlength="4"
                         class="input rounded-full w-full border-none bg-base-200 py-4 outline-none focus:ring-2 ring-violet-500"
-                        placeholder="Enter 4 digit pin" />
+                        placeholder="Enter 4 digit pin" value="1234" />
 
                     <button id="cashout-btn" class="btn btn-primary mt-4 rounded-full tex-[20px] font-semibold">Withdraw
                         Money</button>
@@ -215,7 +215,7 @@
                     <label class="label font-medium text-neutral-950 pt-3">Enter 4 Digit Pin Number </label>
                     <input id="send-money-pin" type="password" minlength="4" maxlength="4"
                         class="input rounded-full w-full border-none bg-base-200 py-4 outline-none focus:ring-2 ring-violet-500"
-                        placeholder="Enter 4 digit pin" />
+                        placeholder="Enter 4 digit pin" value="1234" />
 
                     <button id="send-money-btn" class="btn btn-primary mt-4 rounded-full tex-[20px] font-semibold">Send
                         Now</button>
@@ -276,7 +276,7 @@
                     <label class="label font-medium text-neutral-950 pt-3">Pin Number</label>
                     <input id="bill-pin" type="password" minlength="4" maxlength="4"
                         class="input rounded-full w-full border-none bg-base-200 py-4 outline-none focus:ring-2 ring-violet-500"
-                        placeholder="Enter 4 digit pin number" />
+                        placeholder="Enter 4 digit pin number" value="1234" />
 
                     <button id="pay-bill-btn" class="btn btn-primary mt-4 rounded-full tex-[20px] font-semibold">Add
                         Money</button>
@@ -285,14 +285,14 @@
         </section>
 
         <!-- History -->
-         <section id="transactions" class="w-10/12 mx-auto py-10 hidden">
+        <section id="transactions" class="w-10/12 mx-auto py-10 hidden">
             <h2 class="text-neutral font-semibold text-[18px] pb-3">Transactions</h2>
-            
+
             <div id="history-container" class="">
 
             </div>
 
-         </section>
+        </section>
     </section>
 
 
